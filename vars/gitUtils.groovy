@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-void call(String credentials, Closure body) {
+void withGitAskPass(String credentials, Closure body) {
   String gitAskPassFilePath = pwd(tmp:true) + '/' + UUID.randomUUID().toString()
   try {
     def gitAskPassFile = libraryResource("scripts/git_askpass.sh")
